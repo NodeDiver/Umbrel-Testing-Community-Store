@@ -34,3 +34,16 @@ releaseNotes: >-
 
 
   Key fixes in this release:
+    - Added app pagination for improved performance
+    - Fixed graceful shutdown issue
+    - Addressed password change authorization bug
+    - Added migration button for isolated connections to sub-wallets
+    - Included Wave.space in the app store
+
+
+  Full release notes are found at https://github.com/getAlby/hub/releases
+dependencies:
+  - lightning
+path: ""
+defaultUsername: ""
+defaultPassword: ""

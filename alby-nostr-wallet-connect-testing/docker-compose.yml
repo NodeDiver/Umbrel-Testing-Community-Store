@@ -11,8 +11,9 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/data
       - ${APP_LIGHTNING_NODE_DATA_DIR}:/lnd:ro
-    environment:
-      LN_BACKEND_TYPE: "LND"
+    environment:    
+      LND_IF_AVAILABLE: ${APP_LIGHTNING_NODE_IP:+LND}    
+      LN_BACKEND_TYPE=${LND_IF_AVAILABLE:-LDK}
       LND_ADDRESS: $APP_LIGHTNING_NODE_IP:$APP_LIGHTNING_NODE_GRPC_PORT
       LND_CERT_FILE: "/lnd/tls.cert"
       LND_MACAROON_FILE: "/lnd/data/chain/bitcoin/$APP_BITCOIN_NETWORK/admin.macaroon"
