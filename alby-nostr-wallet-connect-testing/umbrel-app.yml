@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: alby-nostr-wallet-connect-testing
-name: Nostr Wallet Connect - TESTING
+name: Nostr Wallet Connect - TESTINGv0.2
 tagline: Self-custodial Lightning wallet with integrated node and app connections
 category: bitcoin
 version: "1.18.5"
