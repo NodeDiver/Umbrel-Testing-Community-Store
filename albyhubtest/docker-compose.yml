@@ -3,7 +3,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: albyhubtest_server_1
-      APP_PORT: 59000
+      APP_PORT: 8080
       PROXY_AUTH_ADD: "false"
   server:
     image: ghcr.io/getalby/hub:v1.18.5@sha256:2fdeba8991028939ee3b98dca83b7bfaa1dbb6b27dc9182b5552d65395213f96
