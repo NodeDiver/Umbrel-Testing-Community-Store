@@ -1,6 +1,6 @@
 manifestVersion: 1
-id: alby-nostr-wallet-connect-testing
-name: Nostr Wallet Connect - TESTING
+id: albyhubtest
+name: albyhubtest
 tagline: Self-custodial Lightning wallet with integrated node and app connections
 category: bitcoin
 version: "1.18.5"
@@ -42,7 +42,8 @@ releaseNotes: >-
 
 
   Full release notes are found at https://github.com/getAlby/hub/releases
-
+dependencies:
+  - lightning
 path: ""
 defaultUsername: ""
 defaultPassword: ""

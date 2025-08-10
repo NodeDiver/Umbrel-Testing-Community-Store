@@ -2,7 +2,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: alby-nostr-wallet-connect_server_1
+      APP_HOST: albyhubtest_server_1
       APP_PORT: 8080
       PROXY_AUTH_ADD: "false"
   server:
@@ -11,9 +11,8 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/data
       - ${APP_LIGHTNING_NODE_DATA_DIR}:/lnd:ro
-    environment:    
-      LND_IF_AVAILABLE: ${APP_LIGHTNING_NODE_IP:+LND}    
-      LN_BACKEND_TYPE=${LND_IF_AVAILABLE:-LDK}
+    environment:
+      LN_BACKEND_TYPE: "LND"
       LND_ADDRESS: $APP_LIGHTNING_NODE_IP:$APP_LIGHTNING_NODE_GRPC_PORT
       LND_CERT_FILE: "/lnd/tls.cert"
       LND_MACAROON_FILE: "/lnd/data/chain/bitcoin/$APP_BITCOIN_NETWORK/admin.macaroon"
