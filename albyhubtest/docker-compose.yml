@@ -12,7 +12,7 @@ services:
       - ${APP_LIGHTNING_NODE_DATA_DIR:-${APP_DATA_DIR}/lnd-fallback}:/lnd:ro
     environment:
       WORK_DIR: "/data/albyhub"
-      
+      LN_BACKEND_TYPE: ${APP_LIGHTNING_NODE_DATA_DIR:+LND}
       LND_ADDRESS: $APP_LIGHTNING_NODE_IP:$APP_LIGHTNING_NODE_GRPC_PORT
       LND_CERT_FILE: "/lnd/tls.cert"
       LND_MACAROON_FILE: "/lnd/data/chain/bitcoin/$APP_BITCOIN_NETWORK/admin.macaroon"
